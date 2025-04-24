@@ -4,9 +4,7 @@
 BINARY_NAME=search-service
 WORKER_NAME=search-worker
 
-# Docker related variables
-DOCKER_IMAGE_NAME=ecommerce-search-svc
-DOCKER_TAG=latest
+
 
 build:
 	@echo "Building..."
@@ -25,9 +23,7 @@ run-worker:
 	@echo "Running worker..."
 	./bin/$(WORKER_NAME)
 
-docker-build:
-	@echo "Building Docker image..."
-	docker build -t $(DOCKER_IMAGE_NAME):$(DOCKER_TAG) .
+
 
 docker-run:
 	@echo "Running Docker container..."

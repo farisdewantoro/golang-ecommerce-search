@@ -1,34 +1,7 @@
 version: '3.8'
 
 services:
-  # api:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8080:8080"
-  #   environment:
-  #     - CONFIG_PATH=/app/config/config.yaml
-  #   volumes:
-  #     - ./config:/app/config
-  #   depends_on:
-  #     - mongodb
-  #     - elasticsearch
-  #     - kafka
 
-  # worker:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   command: ./bin/search-worker
-  #   environment:
-  #     - CONFIG_PATH=/app/config/config.yaml
-  #   volumes:
-  #     - ./config:/app/config
-  #   depends_on:
-  #     - mongodb
-  #     - elasticsearch
-  #     - kafka
 
   mongodb:
     image: mongo:latest

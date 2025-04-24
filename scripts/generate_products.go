@@ -101,8 +101,8 @@ func sendRequest(product *domain.Product, wg *sync.WaitGroup, successChan chan<-
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	const totalRequests = 100_000_000
-	const concurrentRequests = 10
+	const totalRequests = 10_000_000
+	const concurrentRequests = 50
 
 	var wg sync.WaitGroup
 	successChan := make(chan bool, totalRequests)
