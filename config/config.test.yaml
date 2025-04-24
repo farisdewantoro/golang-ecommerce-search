@@ -1,0 +1,27 @@
+app:
+  name: "ecommerce-search-service-test"
+  port: 8081
+  environment: "test"
+
+mongodb:
+  uri: "mongodb://localhost:27017"
+  database: "ecommerce_test"
+  collection: "products"
+
+elasticsearch:
+  addresses:
+    - "http://localhost:9200"
+  index: "products_test"
+  username: ""
+  password: ""
+
+kafka:
+  brokers:
+    - "localhost:9092"
+  topic:
+    product_updates: "product-updates-test"
+  group_id: "search-service-test"
+
+logging:
+  level: "debug"
+  format: "json" 

@@ -1,0 +1,31 @@
+app:
+  name: "ecommerce-search-service"
+  port: 8080
+  environment: "development"
+
+mongodb:
+  uri: "mongodb://localhost:27017"
+  database: "ecommerce"
+  collection: "products"
+
+elasticsearch:
+  addresses:
+    - "http://localhost:9200"
+  index: "products"
+  username: ""
+  password: ""
+
+kafka:
+  brokers:
+    - "localhost:9092"
+  topic:
+    product_created: "product-created"
+    product_updated: "product-updated"
+    product_deleted: "product-deleted"
+    product_views_inc: "product-views-incremented"
+    product_buys_inc: "product-buys-incremented"
+  group_id: "search-service"
+
+logging:
+  level: "debug"
+  format: "json" 
